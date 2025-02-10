@@ -13,11 +13,13 @@ header {
 
 header h1 {
     margin: 0;
+    font-size: 2rem;
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -35,4 +37,99 @@ main {
     background-color: white;
     margin: 1rem 2rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #333;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+strong {
+    color: #333;
+    font-weight: bold;
+}
+
+ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+ol {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+code {
+    background-color: #f4f4f4;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+}
+
+main pre code {
+    display: block;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-left: 3px solid #333;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    header {
+        padding: 0.5rem 1rem;
+    }
+    
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    main {
+        padding: 1rem;
+        margin: 1rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 0.9rem;
+    }
+    
+    pre {
+        padding: 0.5rem;
+    }
+    
+    code {
+        padding: 0.1rem 0.3rem;
+    }
+    
+    main pre code {
+        padding: 0.5rem;
+        border-left-width: 2px;
+    }
 }
