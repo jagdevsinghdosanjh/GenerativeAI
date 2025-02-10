@@ -23,172 +23,146 @@
     <main>
         <h2>Welcome to the Generative AI Book Collection</h2>
         <p>Explore the books to learn more about Generative AI.</p>
-        <Strong>What is Lang Chain?</Strong>
-        <p>LangChain is a framework designed to help developers build applications powered by large language models
-            (LLMs). It simplifies every stage of the LLM application lifecycle, from development to productionization
-            and deployment1. Here are some key components of LangChain:
-
-            LangChain Core: Provides base abstractions for chat models and other components.
-
-            Integration Packages: Includes integrations with various LLM providers like OpenAI and Anthropic.
-
-            LangGraph: An orchestration framework for building stateful agents with streaming and human-in-the-loop
-            support.
-
-            LangSmith: A tool for inspecting, monitoring, and evaluating LLM applications to optimize and deploy with
-            confidence.
-
-            LangGraph Platform: Allows deploying LangGraph applications at scale with APIs and assistants.
-
-            LangChain aims to make it easier to build context-aware, reasoning applications by leveraging your company's
-            data and APIs. It also supports a wide range of integrations and provides tools for debugging, testing, and
-            monitoring your applications</p>
-        <strong>Python for AI ? How to Use ?</strong>
-        <p>Python is one of the most popular programming languages for AI and machine learning due to its simplicity,
-            readability, and extensive libraries. Here's a brief guide on how to get started with Python for AI:
-            <br>
-            <b>1. Install Python</b><br>
-            Make sure you have Python installed on your machine. You can download and install the latest version from
-            the official Python website.
-            <br>
-            <b>2. Set Up a Virtual Environment</b><br>
-            It's a good practice to create a virtual environment for your AI projects to manage dependencies:
-            <br>
-            <b>Bash Code:</b>
-            <br>
-            <code>
-            # Install virtualenv if you don't have it
-            
-            pip install virtualenv
-
-            # Create a virtual environment
-            
-            virtualenv venv
-
-            # Activate the virtual environment
-            # On Windows:
-            
-            venv\Scripts\activate
-            
-            # On macOS/Linux:
-            
-            source venv/bin/activate
         
-        </code>
-        <br>
-            <b>3. Install Essential Libraries</b>
-            <br>
-            You'll need several libraries for AI and machine learning. Install them using pip:
-            <br>
-            <b>Bash Code:</b><br>
-            <code>
-            pip install numpy pandas scikit-learn tensorflow keras pytorch matplotlib
-        </code>
-        <br>
-        <b>4. Choose an IDE or Notebook</b>
-        <br>
-            You can use an Integrated Development Environment (IDE) like PyCharm, Visual Studio Code, or Jupyter
-            Notebooks for an interactive coding experience. Jupyter Notebooks are particularly popular in the AI
-            community.
-
-        <br>
-          <b>5. Learn the Basics of Machine Learning</b>
-        <br>
-            Familiarize yourself with the basic concepts of machine learning. You can follow online courses, tutorials,
-            and books. Here are some key topics to start with:
-        
-            Data preprocessing
-
-            Supervised learning (e.g., regression, classification)
-
-            Unsupervised learning (e.g., clustering, dimensionality reduction)
-
-            Neural networks and deep learning
-
-            6. Implement a Simple Machine Learning Model
-            Here's an example of how to implement a simple machine learning model using Python:
-
-            Data Preprocessing:
-            <br>
-            <b>Python Code:</b>
-            <br>
-            <code>
-            import numpy as np
-            import pandas as pd
-            from sklearn.model_selection import train_test_split
-            from sklearn.preprocessing import StandardScaler
-
-            # Load dataset
-            data = pd.read_csv('your_dataset.csv')
-
-            # Split data into features and target
-            X = data.iloc[:, :-1].values
-            y = data.iloc[:, -1].values
-
-            # Split data into training and test sets
-            X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
-
-            # Standardize the features
-            scaler = StandardScaler()
-            X_train = scaler.fit_transform(X_train)
-            X_test = scaler.transform(X_test)
-        </code><br>
-            <b>Train a Model:</b>
-            <br>
-            <code>
-            from sklearn.linear_model import LogisticRegression
-            from sklearn.metrics import accuracy_score
-
-            # Create and train the model
-            model = LogisticRegression()
-            model.fit(X_train, y_train)
-
-            # Make predictions
-            y_pred = model.predict(X_test)
-
-            # Evaluate the model
-            accuracy = accuracy_score(y_test, y_pred)
-            print(f'Accuracy: {accuracy:.2f}')
-        </code>
-            <br><b>7. Explore Deep Learning</b>
-            Once you're comfortable with basic machine learning, dive into deep learning. Use frameworks like TensorFlow
-            and PyTorch to build neural networks. Here's a simple example using TensorFlow:
-            <br>
-            <b>Python Code:</b>
-            <br>
-            <code>
-            import tensorflow as tf
-            from tensorflow.keras.models import Sequential
-            from tensorflow.keras.layers import Dense
-
-            # Create a simple neural network
-            model = Sequential([
-            Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
-            Dense(64, activation='relu'),
-            Dense(1, activation='sigmoid')
-            ])
-
-            # Compile the model
-            model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
-
-            # Train the model
-            model.fit(X_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
-
-            # Evaluate the model
-            loss, accuracy = model.evaluate(X_test, y_test)
-            print(f'Accuracy: {accuracy:.2f}')
-        </code><br>
-            <b> 8. Use Google Colab</b><br>
-            Google Colab is an excellent resource for running Python code in the cloud, especially for AI and machine
-            learning projects. It's free and provides access to GPUs. You can start by visiting Google Colab and
-            creating a new notebook.
-            <br><b>
-                Final Thoughts
-            </b><br>
-            Python offers a robust ecosystem for AI and machine learning. By following these steps, you'll be well on
-            your way to building AI models and gaining deeper insights into this fascinating field.
+        <strong>What is LangChain?</strong>
+        <p>
+            LangChain is a framework designed to help developers build applications powered by large language models (LLMs). 
+            It simplifies every stage of the LLM application lifecycle, from development to productionization and deployment.
+            Here are some key components of LangChain:
+            <ul>
+                <li><strong>LangChain Core:</strong> Provides base abstractions for chat models and other components.</li>
+                <li><strong>Integration Packages:</strong> Includes integrations with various LLM providers like OpenAI and Anthropic.</li>
+                <li><strong>LangGraph:</strong> An orchestration framework for building stateful agents with streaming and human-in-the-loop support.</li>
+                <li><strong>LangSmith:</strong> A tool for inspecting, monitoring, and evaluating LLM applications to optimize and deploy with confidence.</li>
+                <li><strong>LangGraph Platform:</strong> Allows deploying LangGraph applications at scale with APIs and assistants.</li>
+            </ul>
+            LangChain aims to make it easier to build context-aware, reasoning applications by leveraging your company's data and APIs. 
+            It also supports a wide range of integrations and provides tools for debugging, testing, and monitoring your applications.
+        </p>
+    
+        <strong>Python for AI? How to Use?</strong>
+        <p>
+            Python is one of the most popular programming languages for AI and machine learning due to its simplicity, readability, and extensive libraries. 
+            Here's a brief guide on how to get started with Python for AI:
+        </p>
+        <ol>
+            <li>
+                <b>Install Python</b><br>
+                Make sure you have Python installed on your machine. You can download and install the latest version from the official Python website.
+            </li>
+            <li>
+                <b>Set Up a Virtual Environment</b><br>
+                It's a good practice to create a virtual environment for your AI projects to manage dependencies:
+                <pre><code># Install virtualenv if you don't have it
+    pip install virtualenv
+    
+    # Create a virtual environment
+    virtualenv venv
+    
+    # Activate the virtual environment
+    # On Windows:
+    venv\Scripts\activate
+    # On macOS/Linux:
+    source venv/bin/activate
+    </code></pre>
+            </li>
+            <li>
+                <b>Install Essential Libraries</b><br>
+                You'll need several libraries for AI and machine learning. Install them using pip:
+                <pre><code>pip install numpy pandas scikit-learn tensorflow keras pytorch matplotlib</code></pre>
+            </li>
+            <li>
+                <b>Choose an IDE or Notebook</b><br>
+                You can use an Integrated Development Environment (IDE) like PyCharm, Visual Studio Code, or Jupyter Notebooks for an interactive coding experience. 
+                Jupyter Notebooks are particularly popular in the AI community.
+            </li>
+            <li>
+                <b>Learn the Basics of Machine Learning</b><br>
+                Familiarize yourself with the basic concepts of machine learning. You can follow online courses, tutorials, and books. Here are some key topics to start with:
+                <ul>
+                    <li>Data preprocessing</li>
+                    <li>Supervised learning (e.g., regression, classification)</li>
+                    <li>Unsupervised learning (e.g., clustering, dimensionality reduction)</li>
+                    <li>Neural networks and deep learning</li>
+                </ul>
+            </li>
+            <li>
+                <b>Implement a Simple Machine Learning Model</b><br>
+                Here's an example of how to implement a simple machine learning model using Python:
+                <pre><code>import numpy as np
+    import pandas as pd
+    from sklearn.model_selection import train_test_split
+    from sklearn.preprocessing import StandardScaler
+    
+    # Load dataset
+    data = pd.read_csv('your_dataset.csv')
+    
+    # Split data into features and target
+    X = data.iloc[:, :-1].values
+    y = data.iloc[:, -1].values
+    
+    # Split data into training and test sets
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
+    
+    # Standardize the features
+    scaler = StandardScaler()
+    X_train = scaler.fit_transform(X_train)
+    X_test = scaler.transform(X_test)
+    </code></pre>
+                <b>Train a Model:</b>
+                <pre><code>from sklearn.linear_model import LogisticRegression
+    from sklearn.metrics import accuracy_score
+    
+    # Create and train the model
+    model = LogisticRegression()
+    model.fit(X_train, y_train)
+    
+    # Make predictions
+    y_pred = model.predict(X_test)
+    
+    # Evaluate the model
+    accuracy = accuracy_score(y_test, y_pred)
+    print(f'Accuracy: {accuracy:.2f}')
+    </code></pre>
+            </li>
+            <li>
+                <b>Explore Deep Learning</b><br>
+                Once you're comfortable with basic machine learning, dive into deep learning. Use frameworks like TensorFlow and PyTorch to build neural networks. 
+                Here's a simple example using TensorFlow:
+                <pre><code>import tensorflow as tf
+    from tensorflow.keras.models import Sequential
+    from tensorflow.keras.layers import Dense
+    
+    # Create a simple neural network
+    model = Sequential([
+        Dense(64, activation='relu', input_shape=(X_train.shape[1],)),
+        Dense(64, activation='relu'),
+        Dense(1, activation='sigmoid')
+    ])
+    
+    # Compile the model
+    model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+    
+    # Train the model
+    model.fit(X_train, y_train, epochs=10, batch_size=32, validation_split=0.2)
+    
+    # Evaluate the model
+    loss, accuracy = model.evaluate(X_test, y_test)
+    print(f'Accuracy: {accuracy:.2f}')
+    </code></pre>
+            </li>
+            <li>
+                <b>Use Google Colab</b><br>
+                Google Colab is an excellent resource for running Python code in the cloud, especially for AI and machine learning projects. 
+                It's free and provides access to GPUs. You can start by visiting Google Colab and creating a new notebook.
+            </li>
+        </ol>
+        <p>
+            <b>Final Thoughts</b><br>
+            Python offers a robust ecosystem for AI and machine learning. By following these steps, you'll be well on your way to building AI models and gaining deeper insights into this fascinating field.
         </p>
     </main>
+    
     <script src="script.js"></script>
 </body>
 
